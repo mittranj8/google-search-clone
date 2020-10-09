@@ -1,6 +1,9 @@
+import { Description, Image, LocalOffer, MoreVert, Room, SearchOutlined } from "@material-ui/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import Response from "./response";
+import Search from "./Search";
 import "./SearchPage.css";
 import useGoogleSearch from "./useGoogleSearch";
 
@@ -20,7 +23,55 @@ function SearchPage() {
   return (
     <div className="searchPage">
       <div className="searchPage_header">
-        <h1>{term}</h1>
+        
+        <Link to="/">
+          <img
+            className="searchPage_logo"
+            src="https://www.google.com//images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+            alt="Google Logo"
+          />
+        </Link>
+
+        <div className="searchPage_headerBody">
+          <Search hideButtons />
+
+          <div className="searchPage_options">
+            <div className="searchPage_optionsLeft">
+              <div className="searchPage_option">
+                 <SearchOutlined />
+                 <Link to="/all">All</Link>
+              </div>
+              <div className="searchPage_option">
+                 <Description />
+                 <Link to="/news">News</Link>
+              </div>
+              <div className="searchPage_option">
+                 <LocalOffer />
+                 <Link to="/shopping">Shopping</Link>
+              </div>
+              <div className="searchPage_option">
+                 <Image />
+                 <Link to="/images">Images</Link>
+              </div>
+              <div className="searchPage_option">
+                 <Room />
+                 <Link to="/maps">Maps</Link>
+              </div>
+              <div className="searchPage_option">
+                 <MoreVert />
+                 <Link to="/more">More</Link>
+              </div>
+            </div>
+            <div className="searchPage_optionsRight">
+            <div className="searchPage_option">
+                 <Link to="/settings">Settings</Link>
+              </div>
+              <div className="searchPage_option">
+                 <Link to="/tools">Tools</Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="searchPage_results"></div>
     </div>

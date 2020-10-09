@@ -1,0 +1,60 @@
+.searchPage_header {
+  display: flex;
+
+  /* Sticks while scrolling */
+  position: sticky;
+  /* Sticks to the top */
+  top: 0;
+  /* Always stays top of the screen; top of any element underneath it */
+  z-index: 100;
+
+  background-color: white;
+  align-items: flex-start;
+  padding: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.searchPage_logo {
+  object-fit: contain;
+  height: 50px;
+  margin-right: 50px;
+}
+
+.searchPage_headerBody > .search > .search_input {
+  margin-top: 0;
+  width: unset;
+  margin: unset;
+  max-width: unset;
+}
+
+.searchPage_options {
+  display: flex;
+  align-items: center;
+  color: grey;
+  margin-left: 20px;
+}
+
+.searchPage_optionsLeft,
+.searchPage_optionsRight {
+  display: flex;
+}
+
+.searchPage_optionsLeft a,
+.searchPage_optionsRight a {
+  text-decoration: none;
+  color: gray;
+}
+
+.searchPage_optionsRight {
+  margin-left: 80px;
+}
+
+.searchPage_option {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.searchPage_option a {
+  margin-left: 5px;
+}
